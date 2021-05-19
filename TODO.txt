@@ -1,0 +1,5 @@
+Testar metodos:
+
+ - Handler.handle()
+ - Response.end()
+ - Request.getBody()
