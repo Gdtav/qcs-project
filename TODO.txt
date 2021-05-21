@@ -3,3 +3,13 @@ Testar metodos:
  - Handler.handle()
  - Response.end()
  - Request.getBody()
+
+ black box testing:
+ função bem documentada e perceber as classes de equivalencia e boundary value analysis
+ control flow testing:
+ 2 ou 3 funcoes em que uma deve ter complexidade 4-5 e outra 7 a 10
+ data flow:
+ func com 4,5,6 variaveis e argumentos
+
+ pensar qual o resultado esperado para cada caso de uso
+ fazer os casos de teste e colocar no junit
