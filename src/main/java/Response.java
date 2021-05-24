@@ -9,10 +9,10 @@ public class Response {
 	public int responseCode = 200;
 	public final Map<String, List<String>> headers;
 	
-	private final HttpExchange exchange;
-	private final List<Byte> data;
-	private boolean postRoute = false;
-	private boolean ended = false;
+	public final HttpExchange exchange;
+	public final List<Byte> data;
+	public boolean postRoute = false;
+	public boolean ended = false;
 	
 	public Response(HttpExchange httpExchange) {
 		this.exchange = httpExchange;
