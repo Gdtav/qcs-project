@@ -10,14 +10,10 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 public class Request {
-	public final int port;
 	public final String rawUrl;
 	public final String urlFragment;
 	public final String urlQuery;
 	public final String urlPath;
-	public final String httpVersion;
-	public final String remoteAddress;
-	public final String localAddress;
 	public final Map<String, String> query;
 	public final Map<String, List<String>> headers;
 	public final Method method;
@@ -35,10 +31,6 @@ public class Request {
 		final String proto = httpExchange.getProtocol();
 
 		this.exchange = httpExchange;
-		this.httpVersion = proto.substring(proto.indexOf("/") + 1);
-		this.port = httpExchange.getLocalAddress().getPort();
-		this.localAddress = httpExchange.getLocalAddress().getAddress().toString();
-		this.remoteAddress = httpExchange.getRemoteAddress().getAddress().toString();
 		this.method = methods.contains(reqMethod)
 				? Method.valueOf(reqMethod)
 				: Method.OTHER;
@@ -60,7 +52,7 @@ public class Request {
 		int data = 0;
 		try {
 			while (true) {
-				data = is.read();
+				data = is.read	();
 				if (data == -1) break;
 				out.add((byte)data);
 			}

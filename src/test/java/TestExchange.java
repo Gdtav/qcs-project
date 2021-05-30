@@ -6,6 +6,7 @@ import com.sun.net.httpserver.HttpPrincipal;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.URI;
+import java.net.URISyntaxException;
 
 public class TestExchange extends HttpExchange {
     @Override
@@ -20,6 +21,11 @@ public class TestExchange extends HttpExchange {
 
     @Override
     public URI getRequestURI() {
+        try {
+            return new URI("");
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -40,7 +46,12 @@ public class TestExchange extends HttpExchange {
 
     @Override
     public InputStream getRequestBody() {
-        return null;
+        return new InputStream() {
+            @Override
+            public int read() throws IOException {
+                return -1;
+            }
+        };
     }
 
     @Override
