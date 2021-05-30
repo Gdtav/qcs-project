@@ -21,13 +21,13 @@ public class Request {
 	public final Map<String, String> query;
 	public final Map<String, List<String>> headers;
 	public final Method method;
-	
-	private final HttpExchange exchange;
-	private final URI uri;
-	private boolean bodyFetched = false;
-	private boolean bodyConverted = false;
-	private List<Byte> body;
-	private String bodyAsString;
+
+	public final HttpExchange exchange;
+	public final URI uri;
+	public boolean bodyFetched = false;
+	public boolean bodyConverted = false;
+	public List<Byte> body;
+	public String bodyAsString;
 	
 	public Request(HttpExchange httpExchange) {
 		final List<String> methods = Arrays.asList(Internal.permittedMethods);

@@ -1,3 +1,6 @@
+
+*.class
+.DS_Store
 /target/classes/Handler.class
 /target/test-classes/HandlerTest.class
 /target/classes/Internal.class
