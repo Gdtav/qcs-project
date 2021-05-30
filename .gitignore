@@ -14,3 +14,8 @@
 /target/classes/RouterPoint.class
 /target/classes/Routing.class
 /target/classes/Server.class
+.classpath
+.settings/org.eclipse.jdt.apt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.jdt.core.prefs
+.project
